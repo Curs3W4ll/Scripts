@@ -3,7 +3,6 @@
 exec wish "$0" -- "$@"
 
 # This is a trivial implementation of an SSH_ASKPASS handler.
-# Git-gui uses this script if none are already configured.
 
 package require Tk
 
@@ -69,7 +68,6 @@ proc finish {} {
 		}
 	}
 
-	# On Windows, force the encoding to UTF-8: it is what `git.exe` expects
 	if {$::tcl_platform(platform) eq {windows}} {
 		set ::answer [encoding convertto utf-8 $::answer]
 	}
@@ -78,7 +76,7 @@ proc finish {} {
 	set ::rc 0
 }
 
-wm title . "OpenSSH"
+wm title . "Input asker"
 tk::PlaceWindow .
 vwait rc
 exit $rc
