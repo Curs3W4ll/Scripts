@@ -4,6 +4,11 @@ Welcome on this repository!
 
 This repo contains some scripts that can be usefull.
 
+You can use the `install.sh` file to automatically install the scripts, example usage:
+```
+./install.sh /etc/scripts
+```
+
 ## Input asker
 
 **filename**: `scripts/graphic_input_asker.sh`
